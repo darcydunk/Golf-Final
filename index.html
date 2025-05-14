@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Gear Shop - Premium Equipment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #006633, #004d26);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #004d26;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin: 0 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #00875d;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1561935170-c1217a0c2f96?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGdvbGYlMjBwbGF5ZXJ8ZW58MHx8fHwxNjcwNjgxMDAw&ixlib=rb-1.2.1&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 50px 20px;
+      justify-items: center;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product h3 {
+      font-size: 1.6em;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .product p {
+      font-size: 1.2em;
+      color: #00875d;
+      margin: 10px 0;
+    }
+
+    .product .description {
+      font-size: 1em;
+      color: #666;
+      margin: 15px 0;
+    }
+
+    .btn-shop-now {
+      background-color: #006633;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-shop-now:hover {
+      background-color: #004d26;
+    }
+
+    .testimonial-section {
+      background-color: #e9f8f2;
+      padding: 60px 20px;
+    }
+
+    .testimonial {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-card p {
+      font-size: 1.1em;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: #004d26;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Golf Gear Shop</h1>
+    <p>Your ultimate source for premium golf equipment</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Shop Now</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#about">About Us</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <h2>Level Up Your Golf Game</h2>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products" id="products">
+    <!-- Golf Driver -->
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1606902799982-15335c8e74cc?auto=format&fit=crop&w=800&q=80" alt="Golf Driver">
+      <div class="product-info">
+        <h3>Golf Driver</h3>
+        <p>$349</p>
+        <p class="description">Maximize your distance with this ultra-lightweight driver. Designed for speed and precision, this club will improve your game.</p>
+        <a href="https://example.com" class="btn-shop-now">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Golf Iron Set -->
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1573258102513-71698ce4f9f9?auto=format&fit=crop&w=800&q=80" alt="Golf Iron Set">
+      <div class="product-info">
+        <h3>Golf Iron Set</h3>
+        <p>$499</p>
+        <p class="description">Complete your set with these high-performance irons. Crafted with the finest materials for maximum control and consistency.</p>
+        <a href="https://example.com" class="btn-shop-now">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Golf Putter -->
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1557404744-e18d7d0f56c2?auto=format&fit=crop&w=800&q=80" alt="Golf Putter">
+      <div class="product-info">
+        <h3>Golf Putter</h3>
+        <p>$179</p>
+        <p class="description">Perfect your short game with this precision-engineered putter. Designed for maximum accuracy on the green.</p>
+        <a href="https://example.com" class="btn-shop-now">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonial-section" id="testimonials">
+    <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">What Our Customers Are Saying</h2>
+    <div class="testimonial">
+      <div class="testimonial-card">
+        <p>"The best golf equipment I've ever used! The driver really helped me improve my distance off the tee."</p>
+        <h4>John Doe</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Amazing quality and great service! My game has improved significantly since I started using their irons."</p>
+        <h4>Jane Smith</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Golf Gear Shop. All rights reserved. | <a href="#about">About Us</a> | <a href="mailto:info@golfgear.com">Contact</a></p>
+  </footer>
+
+</body>
+</html>
